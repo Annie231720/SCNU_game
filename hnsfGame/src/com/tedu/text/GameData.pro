@@ -1,0 +1,12 @@
+left=image/tank/play2/player2_left.png
+down=image/tank/play2/player2_down.png
+right=image/tank/play2/player2_right.png
+up=image/tank/play2/player2_up.png
+enemy_left=image/tank/bot/bot_left.png
+enemy_down=image/tank/bot/bot_down.png
+enemy_right=image/tank/bot/bot_right.png
+enemy_up=image/tank/bot/bot_up.png
+player2_left=image/tank/play1/player1_left.png
+player2_down=image/tank/play1/player1_down.png
+player2_right=image/tank/play1/player1_right.png
+player2_up=image/tank/play1/player1_up.png
