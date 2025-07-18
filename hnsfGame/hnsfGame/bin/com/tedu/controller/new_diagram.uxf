@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>190</y>
+      <w>550</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>com.tedu.controller::GameThread
+--
+-em: ElementManager
+--
++GameThread(): ctor
++run(): //游戏的run方法  主线程&#13;
+void
+-gameLoad(): void
+-gameRun(): void
++ElementPK(List&lt;ElementObj&gt; listA, List&lt;ElementObj&gt; listB): void
+-checkGameState(): void
++moveAndUpdate(Map&lt;GameElement, List&lt;ElementObj&gt;&gt; all, long gameTime): void
+-gameOver(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>370</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>com.tedu.controller::GameListener
+--
+-em = ElementManager.getManager(): ElementManager
+-set = new HashSet&lt;Integer&gt;(): Set&lt;Integer&gt;
+--
++keyTyped(KeyEvent e): void
++keyPressed(KeyEvent e): void
++keyReleased(KeyEvent e): void
+-restartGame(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

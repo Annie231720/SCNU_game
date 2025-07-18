@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>310</y>
+      <w>410</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>com.tedu.manager::ElementManager
+--
+-gameElements: Map&lt;GameElement, List&lt;ElementObj&gt;&gt;
+-EM = null: ElementManager
+--
+-ElementManager(): ctor
++getGameElements(): Map&lt;GameElement, List&lt;ElementObj&gt;&gt;
++addElement(ElementObj obj, GameElement ge): void
++getElementsByKey(GameElement ge): List&lt;ElementObj&gt;
++getManager(): ElementManager
++init(): //实例化在这里完成&#13;
+void
++getGameState(): int
++setGameState(int state): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>450</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>com.tedu.manager::GameLoad
+--
+-em = ElementManager.getManager(): ElementManager
++imgMap = new HashMap(): Map&lt;String, ImageIcon&gt;
++imgMaps: Map&lt;String, List&lt;ImageIcon&gt;&gt;
+-pro = new Properties(): Properties
+-objMap = new HashMap(): Map&lt;String, Class&lt;?&gt;&gt;
+--
++MapLoad(int mapId): void
++loadImg(): //可以带参数，因为不同的关也可能需要不一样的图片资源&#13;
+void
++loadPlay(int playerCount): void
++loadEnemy(int count): void
++getObj(String str): ElementObj
++loadObj(): void
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>580</y>
+      <w>270</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>com.tedu.manager::GameStateElement
+--
++RUNNING = 0: int
++WIN = 1: int
++LOSE = 2: int
+-state = RUNNING: int
+--
++GameStateElement(): ctor
++setState(int state): void
++getState(): int
++showElement(Graphics g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

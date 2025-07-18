@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>600</y>
+      <w>340</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>com.tedu.element::Enemy
+--
+-fx: String
+-random = new Random(): Random
+-moveTimer = 0: int
+-fireTimer = 0: int
+-FIRE_INTERVAL = 80: int
+-MOVE_INTERVAL = 60: int
+--
++Enemy(): ctor
++Enemy(int x, int y, int w, int h, ImageIcon icon): ctor
++createElement(String str): ElementObj
++showElement(Graphics g): void
+#move(): void
+-isPositionValid(int x, int y): boolean
+-getRandomDirection(): String
+-changeRandomDirection(): void
+-updateEnemyImage(): void
+#updateImage(): void
+-fire(): void
+-getBulletStartX(): int
+-getBulletStartY(): int
+#add(long gameTime): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>590</y>
+      <w>260</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>com.tedu.element::EnemyFile
+--
+-moveNum = 2: int
+-fx: String
+--
++EnemyFile(): ctor
++createElement(String str): ElementObj
++showElement(Graphics g): void
+#move(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>770</y>
+      <w>260</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>com.tedu.element::MapObj
+--
+-hp: int
+-name: String
+--
++showElement(Graphics g): void
++createElement(String str): ElementObj
++setLive(boolean live): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>580</y>
+      <w>330</w>
+      <h>550</h>
+    </coordinates>
+    <panel_attributes>com.tedu.element::Play
+--
+-isPlayer1 = true: boolean
+-left = false: boolean
+-up = false: boolean
+-//右&#13;
+right = false: //右&#13;
+boolean
+-down = false: boolean
+-fx = "up": String
+-pkType = false: boolean
+-filetime = 0: long
+--
++Play(): ctor
++Play(int x, int y, int w, int h, ImageIcon icon): ctor
++isPlayer1(): boolean
++setPlayer1(boolean isPlayer1): void
++createElement(String str): ElementObj
++showElement(Graphics g): void
++die(): void
++keyClick(//只有按下或者鬆開才會 调用这个方法&#13;
+boolean bl, //只有按下或者鬆開才會 调用这个方法&#13;
+int key): //只有按下或者鬆開才會 调用这个方法&#13;
+void
+-handlePlayer1Controls(boolean bl, int key): void
+-handlePlayer2Controls(boolean bl, int key): void
++move(): void
+#updateImage(): void
++add(//有啦时间就可以进行控制&#13;
+long gameTime): //有啦时间就可以进行控制&#13;
+void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>60</y>
+      <w>240</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>com.tedu.element::PlayFile
+--
+-moveNum = 3: int
+-fx: String
+--
++PlayFile(): ctor
++createElement(//定义字符串的规则&#13;
+String str): //定义字符串的规则&#13;
+ElementObj
++showElement(Graphics g): void
+#move(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

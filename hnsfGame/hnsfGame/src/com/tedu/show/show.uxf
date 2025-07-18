@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>180</y>
+      <w>490</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>com.tedu.show::GameJFrame
+--
++GameX = 800: int
++GameY = 600: int
+-jPanel = null: JPanel
+-keyListener = null: KeyListener
+-mouseMotionListener = null: MouseMotionListener
+-mouseListener = null: MouseListener
+-thead = null: Thread
+--
++GameJFrame(): ctor
++init(): void
++addButton(): void
++start(): void
++setjPanel(JPanel jPanel): void
++setKeyListener(KeyListener keyListener): void
++setMouseMotionListener(MouseMotionListener mouseMotionListener): void
++setMouseListener(MouseListener mouseListener): void
++setThead(Thread thead): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>30</y>
+      <w>230</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>com.tedu.show::GameMainJPanel
+--
+-em: ElementManager
+--
++GameMainJPanel(): ctor
++init(): void
++paint(Graphics g): void
++run(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
